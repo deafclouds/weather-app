@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+:root {
+     --thicc-font: font-weight: 600;
+     --medium-font: font-weight: 400;
+     --slim-font: font-weight: 300;
+     --just-white: #fffbfb;
+}
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: cornflowerblue;
+  font-family: Open Sans, 'Sans Serif';
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  font-size: 120%;
+}
+.card {
+  padding: 2em;
+  width: 100%;
+  max-width: 520px;
+  margin: 2em;
+  background: rgba(0, 0, 0, 0.822);
+  box-shadow: 0 8px 32px 0 rgba(236, 236, 236, 0.425);
+  backdrop-filter: blur( 12.0px );
+  -webkit-backdrop-filter: blur( 12.0px );
+  border-radius: 10px;
+}
+.search {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.search-bar {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0.7em;
+  border-radius: 25px;
+  background-color: #7c7c7c2b;
+  color: white;
+  font-family: source sans pro;
+  font-size: 1.1rem;
+}
+.search button {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  padding: 1.3em;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+.search button:hover {
+  background-color: rgb(54, 51, 63);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.weather {
+  color: var(--just-white);
+}
+.temp {
+  margin: 0;
+  margin-bottom: 30px;
+}
