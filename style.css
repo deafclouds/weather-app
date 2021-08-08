@@ -10,13 +10,24 @@
   padding: 0 auto;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 600px) {
+  .card {
+    height: 90vh;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 1px;
+  }
+}
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background: cornflowerblue;
+  background: rgb(0, 0, 0);
   font-family: Open Sans, 'Sans Serif';
   background-image: url('https://source.unsplash.com/1600x900/?landscape');
   font-size: 120%;
@@ -25,12 +36,12 @@ body {
   padding: 2em;
   width: 100%;
   max-width: 520px;
-  margin: 2em;
+  /* margin: 2em; */
   background: rgba(0, 0, 0, 0.822);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
   backdrop-filter: blur( 12.0px );
   -webkit-backdrop-filter: blur( 12.0px );
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .search {
   margin-bottom: 10px;
@@ -71,7 +82,7 @@ body {
 }
 .temp {
   margin-top: 0.5em;
-  color: rgb(22, 133, 0);
+  color: rgb(0, 182, 152);
 }
 .feels {
   margin-bottom: 1em;
