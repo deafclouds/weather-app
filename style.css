@@ -14,6 +14,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
   background: cornflowerblue;
   font-family: Open Sans, 'Sans Serif';
@@ -26,7 +27,7 @@ body {
   max-width: 520px;
   margin: 2em;
   background: rgba(0, 0, 0, 0.822);
-  box-shadow: 0 8px 32px 0 rgba(236, 236, 236, 0.425);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
   backdrop-filter: blur( 12.0px );
   -webkit-backdrop-filter: blur( 12.0px );
   border-radius: 10px;
@@ -57,6 +58,9 @@ body {
   background-color: rgb(32, 32, 32);
   color: white;
 }
+.city {
+  font-weight: 400;
+}
 .search button:hover {
   background-color: rgb(54, 51, 63);
   cursor: pointer;
@@ -66,6 +70,40 @@ body {
   color: var(--just-white);
 }
 .temp {
-  margin: 0;
-  margin-bottom: 30px;
+  margin-top: 0.5em;
+  color: rgb(22, 133, 0);
+}
+.feels {
+  margin-bottom: 1em;
+  font-size: 0.7rem;
+}
+.desc {
+  text-transform: capitalize;
+  margin-left: 0;
+}
+.description-box {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  margin-left: 0;
+}
+.icon {
+  margin-left: 0;
+  margin-right: 5px;
+}
+p {
+  font-size: 1.2rem;
+}
+.weather.loading {
+  visibility: hidden;
+  max-height: 20px;
+  position: relative;
+}
+.weather.loading:after { 
+  visibility: visible;
+  content: "loading...";
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
