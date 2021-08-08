@@ -17,8 +17,18 @@
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    border-radius: 1px;
+    border-radius: 0;
+    background-image: none;
   }
+  .feels {
+    margin-bottom: 3em;
+    font-size: 0.7rem;
+  }
+  .description-box {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
 }
 
 body {
@@ -41,7 +51,7 @@ body {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
   backdrop-filter: blur( 12.0px );
   -webkit-backdrop-filter: blur( 12.0px );
-  border-radius: 6px;
+  border-radius: 5px;
 }
 .search {
   margin-bottom: 10px;
@@ -71,6 +81,7 @@ body {
 }
 .city {
   font-weight: 400;
+  margin-top: 1em;
 }
 .search button:hover {
   background-color: rgb(54, 51, 63);
@@ -85,7 +96,7 @@ body {
   color: rgb(0, 182, 152);
 }
 .feels {
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   font-size: 0.7rem;
 }
 .desc {
@@ -95,7 +106,7 @@ body {
 .description-box {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 300px;
   margin-left: 0;
 }
 .icon {
