@@ -16,7 +16,6 @@ let weather = {
         const { temp, humidity, feels_like, pressure } = data.main;
         const { speed } = data.wind;
         const { country } = data.sys;
-        // const { timezone } = data.sys;
         document.querySelector(".city").innerText = name;
         document.querySelector(".temp").innerText = temp + "°C";
         document.querySelector(".feels").innerText = "Feels like " + feels_like + "°C";
@@ -26,7 +25,6 @@ let weather = {
         document.querySelector(".pres").innerHTML = "Pressure: " + pressure + "MB";
         document.querySelector(".wind").innerHTML = "Wind Speed: " + speed + " Km/h";
         document.querySelector(".count").innerHTML = "Country: " + country;
-        // document.querySelector(".timezone").innerHTML = "Timezone: " + timezone;
         document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage ="url('https://source.unsplash.com/1600x900/?" + name + "')"
     },
