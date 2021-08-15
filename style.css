@@ -1,14 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
-:root {
-     --thicc-font: font-weight: 600;
-     --medium-font: font-weight: 400;
-     --slim-font: font-weight: 300;
-     --just-white: #fffbfb;
-}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 * {
   margin: 0 auto;
   padding: 0 auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
@@ -25,42 +20,64 @@
     font-size: 0.7rem;
   }
   .description-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 0;
-}
+  }
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 100vh;
-  background: rgb(0, 0, 0);
-  font-family: Open Sans, 'Sans Serif';
-  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background: black;
+  font-family: Open Sans, "Sans Serif";
+  background-image: url("https://source.unsplash.com/1600x900/?landscape");
   font-size: 120%;
 }
+
 .card {
   padding: 2em;
   width: 100%;
   max-width: 520px;
-  /* margin: 2em; */
   background: rgba(0, 0, 0, 0.822);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
-  backdrop-filter: blur( 12.0px );
-  -webkit-backdrop-filter: blur( 12.0px );
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.479);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-radius: 5px;
 }
+
 .search {
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
-.search-bar {
+
+.search .search-bar {
   width: 100%;
   border: none;
   outline: none;
@@ -71,57 +88,74 @@ body {
   font-family: source sans pro;
   font-size: 1.1rem;
 }
+
 .search button {
   margin: 0.5em;
   border-radius: 50%;
   border: none;
   padding: 1.3em;
-  background-color: rgb(32, 32, 32);
+  background-color: #202020;
   color: white;
 }
-.city {
+
+.search button:hover {
+  background-color: #36333f;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.weather {
+  color: white;
+}
+
+.weather .city {
   font-weight: 400;
   margin-top: 1em;
 }
-.search button:hover {
-  background-color: rgb(54, 51, 63);
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-}
-.weather {
-  color: var(--just-white);
-}
-.temp {
+
+.weather .temp {
   margin-top: 0.5em;
-  color: rgb(0, 182, 152);
+  color: #00b698;
 }
-.feels {
+
+.weather .feels {
   margin-bottom: 3em;
   font-size: 0.7rem;
 }
-.desc {
-  text-transform: capitalize;
-  margin-left: 0;
+
+.weather p {
+  font-size: 1.2rem;
 }
-.description-box {
+
+.weather .description-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 300px;
   margin-left: 0;
 }
-.icon {
+
+.weather .description-box .desc {
+  text-transform: capitalize;
+  margin-left: 0;
+}
+
+.weather .description-box .icon {
   margin-left: 0;
   margin-right: 5px;
 }
-p {
-  font-size: 1.2rem;
-}
-.weather.loading {
+
+.loading {
   visibility: hidden;
   max-height: 20px;
   position: relative;
 }
-.weather.loading:after { 
+
+.loading:after {
   visibility: visible;
   content: "fetching data...";
   color: white;
@@ -129,3 +163,4 @@ p {
   top: 0;
   left: 20px;
 }
+/*# sourceMappingURL=style.css.map */
